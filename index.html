@@ -1,1 +1,187 @@
-<!doctype html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico"><title>tran thanh ba Blog</title><script defer="defer" src="/js/chunk-vendors.029863ac.js"></script><script defer="defer" src="/js/app.b75609bb.js"></script><link href="/css/app.6e8097ed.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but free-blog doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"></div></body></html>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thanh Bá — Tự học AI & Code</title>
+<meta name="description" content="Thanh Bá: tự học AI, làm app web nhỏ và chia sẻ mẹo AI cho người Việt.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f7f8fa; --card:#ffffff; --ink:#101828; --muted:#667085;
+    --line:#e4e7ec; --accent:#0e7490; --accent2:#0891b2; --accent-soft:#ecfeff;
+    --radius:16px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1020px;margin:0 auto;padding:0 20px}
+
+  /* Nav */
+  header{position:sticky;top:0;background:rgba(247,248,250,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10}
+  nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{font-weight:800;font-size:20px;color:var(--ink)}
+  .logo span{color:var(--accent)}
+  .nav-links{display:flex;gap:24px;font-weight:500}
+  .nav-links a{color:var(--ink)}
+  .nav-links a:hover{color:var(--accent);text-decoration:none}
+  @media(max-width:640px){.nav-links{display:none}}
+
+  /* Hero */
+  .hero{padding:72px 0 48px}
+  .badge{display:inline-block;background:var(--accent-soft);color:var(--accent);border:1px solid #cffafe;font-weight:700;font-size:13px;padding:6px 14px;border-radius:999px}
+  .hero h1{font-size:clamp(34px,6vw,56px);line-height:1.2;margin:20px 0 16px;letter-spacing:-.5px}
+  .hero h1 .hl{color:var(--accent)}
+  .hero p{font-size:18px;color:var(--muted);max-width:640px}
+  .cta{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:12px 24px;border-radius:999px;font-weight:700}
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-primary:hover{background:#155e75;text-decoration:none}
+  .btn-ghost{border:1px solid var(--line);background:#fff;color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+
+  /* Sections */
+  section{padding:40px 0}
+  h2{font-size:26px;margin-bottom:8px}
+  .sec-sub{color:var(--muted);margin-bottom:28px;max-width:640px}
+
+  /* Cards */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;gap:10px;transition:transform .15s ease,box-shadow .15s ease}
+  .card:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(16,24,40,.08)}
+  .card h3{font-size:18px}
+  .card p{color:var(--muted);font-size:15px;flex:1}
+  .tags{display:flex;gap:8px;flex-wrap:wrap}
+  .tag{font-size:12px;font-weight:700;background:#f2f4f7;color:#344054;padding:4px 10px;border-radius:999px}
+  .card .go{font-weight:700;font-size:15px}
+  .soon{font-size:14px;font-weight:700;color:var(--muted)}
+
+  /* Page banner */
+  .banner{background:linear-gradient(120deg,#0e7490,#0891b2);color:#fff;border-radius:20px;padding:36px;display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between}
+  .banner h2{color:#fff}
+  .banner p{color:#cffafe;max-width:520px}
+  .banner .btn{background:#fff;color:#0e7490}
+  .banner .btn:hover{background:#f2f4f7;text-decoration:none}
+
+  /* Blog note */
+  .note{background:var(--card);border:1px dashed var(--line);border-radius:var(--radius);padding:28px;color:var(--muted)}
+
+  footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);font-size:14px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="logo" href="#">Thanh<span>Bá</span></a>
+      <div class="nav-links">
+        <a href="#gioi-thieu">Tự sự</a>
+        <a href="#du-an">Dự án</a>
+        <a href="#blog">Blog</a>
+        <a href="#lien-he">Liên hệ</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="hero">
+    <span class="badge">Tự học AI &amp; Code</span>
+    <h1>Xin chào, mình là <span class="hl">Thanh Bá.</span></h1>
+    <p>Mình tự học AI và làm những app web nhỏ, chạy ngay trên trình duyệt — rồi chia sẻ lại mẹo dùng AI cho người Việt trên Fanpage AI &amp; Công Nghệ Mỗi Ngày.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#du-an">Xem các app đã làm</a>
+      <a class="btn btn-ghost" href="https://facebook.com/61595388977682" target="_blank" rel="noopener">Theo dõi Fanpage</a>
+    </div>
+  </div>
+
+  <section id="gioi-thieu">
+    <h2>Chút tự sự</h2>
+    <p class="sec-sub">Mình bắt đầu học code từ con số 0 — đúng nghĩa là chưa từng viết một dòng code nào. Không ai cầm tay chỉ việc, chỉ có tò mò và thời gian rảnh.</p>
+    <p class="sec-sub">Ngoài việc học code, mình làm về mảng editor: cắt dựng video, làm giọng đọc, phụ đề. Cũng chính từ nhu cầu làm video mà mình mò sang AI — giọng đọc VieNeu, chuyển audio thành phụ đề, rồi tự làm app phục vụ việc đó.</p>
+    <p class="sec-sub">Trang này ghi lại quá trình thật của một người chưa biết gì và đang trên hành trình tìm hiểu. Nếu bạn cũng có đam mê mà chưa biết bắt đầu từ đâu, thì mình cùng tìm hiểu nhé. Còn kết quả cuối cùng ra sao thì… thành thật mà nói, vẫn đang là ẩn số :))</p>
+  </section>
+
+  <section id="du-an">
+    <h2>Dự án đã làm</h2>
+    <p class="sec-sub">Các app đều là 1 file HTML duy nhất, mở lên là chạy, không cần cài đặt.</p>
+    <div class="grid">
+
+      <div class="card">
+        <h3>Prompt Builder 4 phần</h3>
+        <p>Nhập vai trò, nhiệm vụ, ngữ cảnh và định dạng — app ghép thành prompt hoàn chỉnh, kèm kho yêu cầu theo mục đích và quy tắc tự kiểm tra.</p>
+        <div class="tags"><span class="tag">HTML</span><span class="tag">1 file</span></div>
+        <a class="go" href="https://github.com/bathanhtran/hoc-ai-va-code/tree/main/prompt-builder" target="_blank" rel="noopener">Xem mã nguồn →</a>
+      </div>
+
+      <div class="card">
+        <h3>Bot Quét Bảo Vệ Code</h3>
+        <p>Quét code ngay trong trình duyệt, tìm API key, token và mật khẩu viết thẳng trong code. Kết quả che mờ key, chỉ quét code của chính bạn.</p>
+        <div class="tags"><span class="tag">HTML</span><span class="tag">Bảo mật</span></div>
+        <a class="go" href="https://github.com/bathanhtran/hoc-ai-va-code/tree/main/secret-scanner" target="_blank" rel="noopener">Xem mã nguồn →</a>
+      </div>
+
+      <div class="card">
+        <h3>Flashcard Học AI</h3>
+        <p>10 thẻ thuật ngữ AI bằng tiếng Việt dễ hiểu, lật thẻ, đánh dấu đã thuộc, xáo trộn và lọc thẻ chưa thuộc để ôn tập.</p>
+        <div class="tags"><span class="tag">HTML</span><span class="tag">Học tập</span></div>
+        <a class="go" href="https://github.com/bathanhtran/hoc-ai-va-code/tree/main/flashcard" target="_blank" rel="noopener">Xem mã nguồn →</a>
+      </div>
+
+      <div class="card">
+        <h3>Quản Lý Chi Tiêu</h3>
+        <p>Nhập thu chi theo ngày, tự tính tổng theo tháng, hạn mức ngân sách theo danh mục, so sánh với tháng trước, xuất nhập JSON.</p>
+        <div class="tags"><span class="tag">HTML</span><span class="tag">Tài chính</span></div>
+        <a class="go" href="https://github.com/bathanhtran/hoc-ai-va-code/tree/main/quan-ly-chi-tieu" target="_blank" rel="noopener">Xem mã nguồn →</a>
+      </div>
+
+      <div class="card">
+        <h3>App Thời Tiết</h3>
+        <p>Gõ tên thành phố là xem nhiệt độ, độ ẩm, gió và dự báo 7 ngày — dùng API Open-Meteo miễn phí, không cần key.</p>
+        <div class="tags"><span class="tag">HTML</span><span class="tag">API thật</span></div>
+        <span class="soon">Sắp lên GitHub</span>
+      </div>
+
+      <div class="card">
+        <h3>Trading Bot Demo</h3>
+        <p>Mô phỏng bot giao dịch bằng tiền ảo: tín hiệu EMA, cắt lỗ, chốt lời — để học cách bot vận hành mà không mất tiền thật.</p>
+        <div class="tags"><span class="tag">HTML</span><span class="tag">Demo</span></div>
+        <span class="soon">Sắp lên GitHub</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="banner">
+      <div>
+        <h2>AI &amp; Công Nghệ Mỗi Ngày</h2>
+        <p>Fanpage của mình: bản tin AI mỗi sáng, mẹo dùng AI dễ làm theo và cảnh báo lừa đảo bằng AI.</p>
+      </div>
+      <a class="btn" href="https://facebook.com/61595388977682" target="_blank" rel="noopener">Ghé Fanpage →</a>
+    </div>
+  </section>
+
+  <section id="blog">
+    <h2>Blog</h2>
+    <div class="note">
+      Mình đang tập trung làm app và đăng bài đều trên Fanpage trước. Bài viết dài về hành trình học AI &amp; code sẽ được đăng tại đây khi có bài mới.
+      Trong lúc chờ, mời bạn đọc bản tin hằng ngày trên <a href="https://facebook.com/61595388977682" target="_blank" rel="noopener">Fanpage AI &amp; Công Nghệ Mỗi Ngày</a>.
+    </div>
+  </section>
+
+</main>
+
+<footer id="lien-he">
+  <div class="wrap" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;width:100%">
+    <span>© 2026 Thanh Bá</span>
+    <span><a href="https://github.com/bathanhtran" target="_blank" rel="noopener">GitHub</a> · <a href="https://facebook.com/61595388977682" target="_blank" rel="noopener">Facebook Page</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
